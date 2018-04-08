@@ -7,7 +7,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-       
+    <Page.Resources>
+        <!--<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>-->
+    </Page.Resources>
+
+    <Grid x:Name="mainG_10" Background="{ThemeResource SystemControlChromeHighAcrylicWindowMediumBrush}">
+        <NavigationView IsPaneOpen="False" OpenPaneLength="200" CompositeMode="MinBlend" Margin="0,38,0,0" x:Name="navV" SelectionChanged="navV_slc" IsSettingsVisible="True" IsPaneToggleButtonVisible="True" IsTabStop="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Name="home" Margin="0,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE80f;" FontFamily="segoe mdl2 assets" VerticalAlignment="Center"/>
+                        <TextBlock Text="Home" Margin="17,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </NavigationViewItem>
+                <NavigationViewItem Name="passes" IsSelected="True">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8b2;" FontFamily="segoe mdl2 assets" VerticalAlignment="Center"/>
+                        <TextBlock Text="Passes" Margin="17,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </NavigationViewItem>
+                <NavigationViewItem Name="events">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE719;" FontFamily="segoe mdl2 assets" VerticalAlignment="Center"/>
+                        <TextBlock Text="Events" Margin="17,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </NavigationViewItem>
+                <NavigationViewItem Name="memberS">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xEc1b;" FontFamily="segoe mdl2 assets" VerticalAlignment="Center"/>
+                        <TextBlock Text="Mempership Cards" Margin="17,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame">
+                
+            </Frame>
+        </NavigationView>
+        <TextBlock x:Name="title_10" Text="Wallet" HorizontalAlignment="Left" FontSize="13" VerticalAlignment="Top" Margin="10,10,0,0"/>
     </Grid>
 </Page>
